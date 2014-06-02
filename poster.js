@@ -16,34 +16,6 @@ function showPosters(){
 			setUpLazyLoad();
 			//build global hash
 			buildGlobalHash();
-
-
-			
-
-			//delete me
-			//var posterInfo = global["id"+118];
-	    	//var $info = buildInfo(posterInfo);
-
-	    	//$('body').append($info.html());
-	    	/*$("#canEditButton").click(function(){
-	    		$(this).html("checking...");
-	    		//TODO:remove id
-	    		ajaxCheckAccessCode("118",$("#ac_access_code").val(), function(returned_text){
-	    			var resultJson = JSON.parse(returned_text);
-	    			if(resultJson.canEdit=="true"){
-	    				//close and set input fields to editable with blue background
-	    				$("#accessCodeRow").collapse('hide');
-	    				$("#canEditButton").html("Submit");
-	    				startEditMode( posterInfo );
-	    			}else{
-	    				//show error by highlight and setting button to failed temporarly
-	    				$("#ac_access_code").stop(true, true).effect("highlight", {queue:false, duration:2000 } );
-						$("#canEditButton").html("Incorrect code").removeClass('btn-info').addClass('btn-danger');
-	    				setTimeout(function(){ $("#canEditButton").html("Submit").removeClass('btn-danger').addClass('btn-info'); },2000);
-	    			}
-	    			
-	    		});
-	    	});*/
 		}
 		//set up search even if nothing returns
 		setUpSearchBar($("#searchBar"));
@@ -96,10 +68,7 @@ function setUpFBox(){
 		    },
 		    beforeLoad: function() {
 		    	//set width and height manually TODO:will probably have to edit source. it ignore this
-		    	//unless the 'type' option is set to 'iframe'
-		    	//this.width = $(window).height() - 20;
-		    	//this.height = ($(window).height() - 20);
-
+		    	
 		    	//set the title with info about the event
 		    	//TODO: get the attr id and look it up in the json
 		    	var id = $(this.element).attr('posterId');
